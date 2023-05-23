@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabbed Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="logo.png" alt="Image" width=10%">
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'about')">About</button>
+    <button class="tablinks" onclick="openTab(event, 'skills')">Skills</button>
+    <button class="tablinks" onclick="openTab(event, 'academics')">Academics</button>
+    <button class="tablinks" onclick="openTab(event, 'contact')">Contact</button>
+  </div>
+  
+  <div id="about" class="tabcontent">
+    <h3>About</h3>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="me.jpg" alt="About Image" width="200" height="200">
+      </div>
+      <div class="about-text">
+        <h1>Soumya Snigdha Das</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident consectetur laboriosam in quo esse inventore enim illum architecto impedit earum. Molestiae amet quisquam tenetur. Necessitatibus dignissimos aut dolorem est soluta!</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div id="skills" class="tabcontent">
+    <h3>Skills</h3>
+    <ul>
+      <li>HTML</li>
+      <li>JavaScript</li>
+      <li>CSS</li>
+      <li>C</li>
+      <li>Java</li>
+      <li>Python</li>
+    </ul>
+  
+    <h3>Experience</h3>
+    <ul>
+      <li>Junior Web Developer at XYZ</li>
+      <li>Software Intern at ABC</li>
+    </ul>
+    
+    <h3>Hobbies</h3>
+    <ul>
+      <li>Piano</li>
+      <li>Photography</li>
+      <li>Cooking</li>
+      <li>Reading</li>
+    </ul>
+  </div>
+  
+
+  
+  <div id="academics" class="tabcontent">
+    <h3>Academics</h3>
+    <table>
+      <tr>
+        <th>Subject</th>
+        <th>Marks</th>
+      </tr>
+      <tr>
+        <td>Web Technology</td>
+        <td>95</td>
+      </tr>
+      <tr>
+        <td>DBMS</td>
+        <td>92</td>
+      </tr>
+      <tr>
+        <td>Data Structures</td>
+        <td>89</td>
+      </tr>
+      <tr>
+        <td>Operating System</td>
+        <td>87</td>
+      </tr>
+      <tr>
+        <td>Mathematics</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>Networks</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>Aptitude</td>
+        <td>96</td>
+      </tr>
+    </table>
+  </div>
+  
+  
+  <div id="contact" class="tabcontent">
+    <h3>Contact</h3>
+    <p>Address: B2/12 Kalyani, N24, West Bengal, 741231</p>
+    <p>Phone: +91 234 567 890</p>
+    <p>Email: example@example.com</p>
+  </div>
+  
+  
+  <script>
+    // JavaScript function to open a specific tab content
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+</html>
